@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+p{
+    font-weight: bold;
+}
+
+#titulo{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.3rem;
+    font-size: 6rem;
+}
+
+#subtitulo{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: px;
+}
+
+.fondo{
+    background-color: rgb(250, 215, 221);
+    height: 100%;
+    padding-bottom: 2rem;
+}
+
+.productoEnCarrito{
+    color:white;
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.modal-carrito{
+    background-color: black;
+}
+
+.fuente{
+    font-size: 1.5rem;
+}
+
+
+main {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+}
+
+header{
+    text-align: center;
+}
+
+.headertitulos{
+    padding-bottom: 2.5rem;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+.nav {
+    height: 6rem;
+}
+
+.nav-menu {
+    display: flex;
+    border-top: 8px solid rgb(0, 0, 0);
+    border-bottom: 8px solid rgb(0, 0, 0);
+    height: 5.9rem;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-menu-item {
+    width: 100%;
+}
+
+.button {
+    padding: 1rem 5rem;
+    border: 3px solid black;
+    font-size: 1.3rem;
+    color: red;
+}   
+
+.container {
+    max-width: 100%;
+    width: 92%;
+}
+
+h1 {
+    color: red;
+}
+
+.card-main{
+    display: inline-block;
+}
+
+.card {
+    width: 30rem;
+    padding: 1rem 2rem;
+    margin: 10px;
+    border: 5px solid black;
+}
+
+.parrafotortas{
+    font-size: 1.3rem;
+}
+
+img {
+    width: 10rem;
+    height: 15rem;
+}
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+
+.modal-carrito {
+    width: 20rem;
+    height: auto;
+    background-color: whitesmoke;
+    border: 4px solid red;
+}
+
+.caja-recomendaciones{
+    border: 4px dotted rgb(16, 20, 22);
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    justify-content: center;
+    margin: 3rem auto 2rem auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.buttonrec{
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    margin: 5px;
+}

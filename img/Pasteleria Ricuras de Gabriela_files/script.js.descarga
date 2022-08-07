@@ -1,0 +1,173 @@
+/********************** CREACION DE LA CLASE PRODUCTO *****************************/  
+
+class Producto {
+    constructor(nombre, precio, stock) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
+/********************** CREAMOS FUNCION PARA DETERMINAR SI HAY O NO STOCK *****************************/  
+
+    informacion() {
+        let info = `Nombre: ${this.nombre}, Precio: ${this.precio}`;
+
+        if (this.stock > 0) {
+            info += ` / Hay stock: ${this.stock}`;
+        } else {
+            info = +`No hay stock`;
+        }
+        console.log(info)
+    }
+}
+
+/********************** DEFINICION DE LOS PARAMETROS CREANDO PRODUCTROS NUEVOS *****************************/  
+
+const torta1 = new Producto('Lemonpie', 1500, 5);
+const torta2 = new Producto('Brownie', 2000, 20);
+const torta3 = new Producto('Rogel', 1100, 30);
+
+
+/*************** LLAMAMOS A CONSOLA LA INFORMACION A TRAVES DE LA FUNCION CREADA ANTERIORMENTE ***************/  
+torta1.informacion()
+torta2.informacion()
+torta3.informacion()
+
+/********************** MEDIANTE UN CICLO WHILE, Y UNA CONDICION DE ENTRADA, CONSULTAMOS LOS PRODUCTOS *****************************/  
+/********************** A COMPRAR PARA OBTENER UNA RESPUESTA DE PARTE DEL SISTEMA CREADO, UN RESULTADO DEL PRECIO ******************/  
+let entrada = "";
+
+entrada = prompt("Desea comprar torta? Si / No");
+
+while (entrada != "no") {
+
+    let eleccion = prompt(`Que torta desea elegir? lemonpie/brownie/rogel`);
+    let cantidad = parseInt(prompt(`Cuantas tortas desea comprar?`));
+
+
+    if (eleccion == "lemonpie") {
+
+        alert(`Las tortas le costaran: ${torta1.precio * cantidad}$`)
+
+    } else if (eleccion == "brownie") {
+
+        alert(`Las tortas le costaran: ${torta2.precio * cantidad}$`)
+
+    } else if (eleccion == "rogel") {
+
+        alert(`Las tortas le costaran: ${torta3.precio * cantidad}$`)
+
+    } else {
+        alert(`No trabajamos con esas tortas por el momento`);
+    }
+
+    entrada = prompt("Desea comprar otras tortas? Si / No");
+}
+
+/********************** CREACION DE LOS ARRAYS / OBJETOS DENTRO DE ARRAYS *****************************/  
+
+const comidaSalada = [`milanesa`, `sanguches`, `empanadas`, `pizza`];
+
+export const comidaDulce = [
+    { id:`1`, nombre: "lemonpie", tipo: "torta", precio:"2500", img:'img/lemon.jpg'},
+    { id:`2`, nombre: "brownie", tipo: "torta", precio:"2500", img:'img/lemon.jpg'},
+    { id:`3`, nombre: "roge", tipo: "torta", precio:"2500", img:'img/lemon.jpg'},
+    { id:`4`, nombre: "cupcakes", tipo: "pastel", precio:"1500", img:'img/lemon.jpg'},
+    { id:`5`, nombre: "magdalenas", tipo: "pastel", precio:"1500", img:'img/lemon.jpg'},
+    { id:`6`, nombre: "muffins", tipo: "pastel", precio:"1500", img:'img/lemon.jpg'},
+    { id:`7`, nombre: "churro", tipo: "facturas", precio:"500", img:'img/lemon.jpg'},
+    { id:`8`, nombre: "medialunas", tipo: "facturas", precio:"500", img:'img/lemon.jpg'}
+]
+
+/********************** FUNCIONES DE TIPO PUSH - INCLUDES - FILTER *****************************/  
+
+function agregarComida() {
+    let comida = prompt(`que comida queres queres agregar?`);
+    comidaSalada.push(comida);
+    console.clear();
+    alert(`Hemos agregado: "` + comida + `"al menu`)
+}
+
+function eliminarComida() {
+    let comidaEliminada = comidaSalada.pop()
+    alert(`Hemos sacado: "` + comidaEliminada + `" del menu`)
+}
+
+function buscarComida() {
+    let comidaAbuscar = prompt(`Que comida desea buscar?`);
+    let resultado = comidaSalada.includes(comidaAbuscar)
+    if (resultado) {
+        console.log(`Tenemos esa comida!`)
+    } else {
+        console.warn(`No tenemos por el momento ` + comidaAbuscar + `. Podrá dejarnos su sugerencia proximamente. `)
+    }
+}
+
+function buscarTortas() {
+    const filtro = comidaDulce.filter(x => x.tipo == "torta")
+    console.log(filtro)
+}
+
+function buscarPasteles() {
+    const filtro2 = comidaDulce.filter(x => x.tipo == "pastel")
+    console.log(filtro2)
+}
+
+function buscarFacturas() {
+    const filtro3 = comidaDulce.filter(x => x.tipo == "facturas")
+    console.log(filtro3)
+}
+
+/********************** MODIFICANDO EL DOM *****************************/  
+/********************** MODIFICANDO EL DOM *****************************/  
+/********************** MODIFICANDO EL DOM *****************************/  
+
+const tituloNuevo = document.getElementById('titulo')
+tituloNuevo.innerHTML = "WWW.RICURASDEGABRIELA.COM"
+const subtituloNuevo = document.getElementById('subtitulo')
+subtituloNuevo.innerHTML = "Bienvenidos, Soy Gaby y aca te muestro mis mejores comidas"
+
+tituloNuevo.className = "titleModificated"
+
+function listarProductos() {
+    comidaSalada.forEach((comida) => {
+    console.table(comida)
+});
+}
+
+const productos = [];
+
+const mostrarProductos = (productos) => {
+    const contenedorProductos = document.getElementById('producto-contenedor'); 
+
+
+    comidaDulce.forEach(producto =>  {
+        const div = document.createElement('div')
+        div.classList.add('card-main')
+        div.innerHTML += ` <div class="card" style="width: 30rem;">
+                             <img src="${producto.img}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"> ${producto.nombre}</h5>
+                                    <p class="card-text">Tipo: ${producto.tipo}</p>
+                                    <p class="card-text">Precio:$ ${producto.precio}</p>
+                                    <button class="btn btn-primary" id="boton"${producto.id}>Comprar</button>
+                                </div> 
+                            </div>`
+
+                            contenedorProductos.appendChild(div)
+
+                            /*const boton = document.getElementById(`id=boton${comidaDulce.id}`)
+                            boton.addEventListener(`click`, ()=>{
+                                carritoIndex(comidaDulce.id)
+
+                            } )*/
+    
+                            } )
+
+}
+
+mostrarProductos(comidaDulce)
+
+
+
+

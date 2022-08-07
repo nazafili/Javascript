@@ -1,0 +1,17 @@
+[
+    {
+        "torta": "rogel",
+        "ingredientes": "dulce de leche, crema",
+        "valor": 1300
+    },
+    {
+        "torta": "lemonpie",
+        "ingredientes": "limon, merengue",
+        "valor": 1500
+    },
+    {
+        "torta": "brownie",
+        "ingredientes": "dulce de leche, chocolate, mousse de chocolate",
+        "valor": 1800
+    }
+    ]

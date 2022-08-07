@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pasteleria Ricuras de Gabriela</title>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <header>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="#">Sobre Mi</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <button class="button" href="#" id="open">Carrito
+                        </a>
+                    </li>
+                </nav>
+            </header>
+
+            <div class="fondo">
+                <main id="producto-contenedor">
+                    <div class="headertitulos">
+                    <header>
+                        <h1 id="titulo">Ricuras de Gabriela</h1>
+                        <h2 id="subtitulo">Tortas, postres y comidas saladas</h2>
+                    </header>
+                </div>
+                    <div>
+                        <p class="parrafotortas">
+                            Elegi la torta que mas te guste y agregala al carrito!
+                        </p>
+                    </div>
+                    <div id="modal_container" class="modal-container">
+                        <div class="modal-carrito">
+                            <h3>Carrito</h3>
+                            <button id="cerrar">Cerrar</button>
+                            <div id="carrito-contenedor"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="contenido"></div>
+                </main>
+
+                <div class="caja2">
+                <section class="caja-recomendaciones">
+                    <h1>Recomendaciones</h1>
+                    <p>Podes dejarme a continuacion que comidas/postres te gustarian para el futuro</p>
+                    <input
+                        type="text"
+                        class="buttonrec"
+                        id="inputComida"
+                        placeholder="Ingrese su recomendacion!"
+                    >
+                    <button id="btnCargar" class="primary buttonrec">Cargar</button>
+                    <button id="btnCancelar" class="secondary buttonrec">Cancelar</button>
+                    <button id="btnVer" class="contrast buttonrec">Ver listado</button>
+                </section>
+            </div>
+            </div>
+
+
+                <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <img
+                                src="./img/masitas.jpg"
+                                class="mb-2"
+                                alt=""
+                                width="24"
+                                height="24"
+                            >
+                            <small class="d-block mb-3 text-muted">© 2017-2018</small>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Features</h5>
+                            <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#">Cool stuff</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Random feature</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Team feature</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Stuff for developers</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Another one</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Last time</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Resources</h5>
+                            <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#">Resource</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Resource name</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Another resource</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Final resource</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>About</h5>
+                            <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#">Team</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Locations</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <script src="./js/script.js" type="module"></script>
+            <script src="./js/carritoIndex.js" type="module"></script>
+            <script src="./js/modal.js" type="module"></script>
+            <script src="./js/app.js" type="module"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </body>
+    </html>
