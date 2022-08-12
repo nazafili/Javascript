@@ -35,37 +35,6 @@ torta1.informacion()
 torta2.informacion()
 torta3.informacion()
 
-/********************** MEDIANTE UN CICLO WHILE, Y UNA CONDICION DE ENTRADA, CONSULTAMOS LOS PRODUCTOS *****************************/  
-/********************** A COMPRAR PARA OBTENER UNA RESPUESTA DE PARTE DEL SISTEMA CREADO, UN RESULTADO DEL PRECIO ******************/  
-/*let entrada = "";
-
-entrada = prompt("Desea comprar torta? Si / No");
-
-while (entrada != "no") {
-
-    let eleccion = prompt(`Que torta desea elegir? lemonpie/brownie/rogel`);
-    let cantidad = parseInt(prompt(`Cuantas tortas desea comprar?`));
-
-
-    if (eleccion == "lemonpie") {
-
-        alert(`Las tortas le costaran: ${torta1.precio * cantidad}$`)
-
-    } else if (eleccion == "brownie") {
-
-        alert(`Las tortas le costaran: ${torta2.precio * cantidad}$`)
-
-    } else if (eleccion == "rogel") {
-
-        alert(`Las tortas le costaran: ${torta3.precio * cantidad}$`)
-
-    } else {
-        alert(`No trabajamos con esas tortas por el momento`);
-    }
-
-    entrada = prompt("Desea comprar otras tortas? Si / No");
-}
-
 /********************** CREACION DE LOS ARRAYS / OBJETOS DENTRO DE ARRAYS *****************************/  
 
 const comidaSalada = [`milanesa`, `sanguches`, `empanadas`, `pizza`];
@@ -156,17 +125,26 @@ const mostrarProductos = (productos) => {
                             </div>`
 
                             contenedorProductos.appendChild(div)
+                            
 
                             const boton = document.getElementById(`boton${producto.id}`)
                             boton.addEventListener(`click`, ()=>{
                                 carritoIndex(producto.id)
-                                alert(`Se agrego ${producto.nombre}`)
-
+                                Swal.fire({
+                                    title: `Agregaste ${producto.nombre} al carrito!`,
+                                    text: 'Seguí seleccionando productos para tu compra :)',
+                                    icon: 'success',
+                                    confirmButtonText: 'Cerrar'
+                                })
                             } )
     
                             } )
-
+                        
+                            
 }
+
+
+
 
 mostrarProductos(comidaDulce)
 
@@ -174,7 +152,9 @@ mostrarProductos(comidaDulce)
 const alertita = document.getElementById('btnCancelar');
 const alerta2 = document.getElementById('btnCargar');
 
-
+/////////////////////////////////////////////
+/////////////SWEET ALERTS////////////////////
+/////////////////////////////////////////////
 
 alerta2.addEventListener('click', () => {
     Swal.fire({
@@ -198,8 +178,4 @@ const obtenerContenido = (URL) => {
     })
 
 }
-
-
-
-
-
+    

@@ -1,3 +1,7 @@
+///////////////////////////////////////
+// MODALS PARA CERRAR, ABRIR CARRITO // 
+///////////////////////////////////////
+
 const modalContenedor = document.querySelector('.modal-container');
 
 const abrirCarrito = document.getElementById('open');
@@ -14,10 +18,11 @@ cerrarCarrito.addEventListener('click', ()=> {
     modalContenedor.classList.remove('modal-active')
 })
 
-modalContenedor.addEventListener('click', ()=> {
-    cerrarCarrito.click()
-})
+//modalContenedor.addEventListener('click', ()=> {
+//    cerrarCarrito.click()
+//})
 
-modalContenedor.addEventListener('click', (e)=> {
-    e.stopPropagation
-}) 
+//modalContenedor.addEventListener('click', (e)=> {
+//    e.stopPropagation
+//}) 
+
